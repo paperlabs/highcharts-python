@@ -32,16 +32,19 @@ class DictBacked(object):
 
     def __setattr__(self, attr, val):
         if attr in self.available_options:
-            if val == None:
-                del self.options[attr]
-            else:
-                self.options[attr] = val
+            self.options[attr] = val
         else:
             super(DictBacked, self).__setattr__(attr, val)
 
     def __getattr__(self, attr):
         if attr in self.available_options:
             return self.__dict__['options'].get(attr, None)
+        else:
+            raise AttributeError
+
+    def __delattr__(self, attr):
+        if attr in self.available_options:
+            del self.options[attr]
         else:
             raise AttributeError
 
