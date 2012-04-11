@@ -1,7 +1,6 @@
-try:
-    import simplejson as json
-except ImportError:
-    import json
+from datetime import date, time
+import calendar
+import json
 
 
 class ObjectEncoder(json.JSONEncoder):
@@ -11,6 +10,8 @@ class ObjectEncoder(json.JSONEncoder):
     def default(self, obj):
         if hasattr(obj, 'as_json'):
             return obj.as_json()
+        elif isinstance(obj, (datetime, date)):
+            return calendar.timegm(obj.timetuple()) * 1000
         else:
             return super(ObjectEncoder, self).default(obj)
 
