@@ -20,6 +20,7 @@ CHART = [
     'xAxis',
     'yAxis',
     'rangeSelector',
+    'scrollbar',
 ]
 
 
