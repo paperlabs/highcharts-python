@@ -3,6 +3,7 @@ The different types of series that can be charted.
 '''
 import options
 import types
+import config_sections
 from common import *
 
 
@@ -36,9 +37,7 @@ class Series(DictBacked):
     See http://www.highcharts.com/ref/#plotOptions-series for available options.
     '''
     def __init__(self, data=[], **kwargs):
-        self.defaults = {
-            "type": self.series_type
-        }
+        self.defaults["type"] = self.series_type
         self.available_options += options.SERIES
         super(Series, self).__init__(**kwargs)
         self.data = data
@@ -49,6 +48,19 @@ class Series(DictBacked):
             self.options['data'] = [x if isinstance(x, (Point, types.NoneType)) else Point(x) for x in val]
         else:
             super(Series, self).__setattr__(attr, val)
+
+
+class SplineSeries(Series):
+    series_type = 'spline'
+    available_options = ['step', 'marker']
+    defaults = {
+        'marker': config_sections.MarkerConfig
+    }
+
+
+class AreaSplineSeries(Series):
+    series_type = 'areaspline'
+    available_options = ['fillColor', 'fillOpacity', 'lineColor', 'threshold']
 
 
 class AreaSeries(Series):

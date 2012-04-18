@@ -277,3 +277,12 @@ RANGE_SELECTOR_CONFIG = [
     'labelStyle',
     'selected',
 ]
+
+MARKER_CONFIG = [
+    'enabled',
+    'fillColor',
+    'lineColor',
+    'lineWidth',
+    'radius',
+    'symbol',
+]

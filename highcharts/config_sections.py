@@ -86,8 +86,16 @@ class YAxisConfig(ConfigSection):
         "title": TitleConfig,
     }
 
+
 class RangeSelectorConfig(ConfigSection):
     '''http://www.highcharts.com/stock/ref/#rangeSelector'''
-    
+
     available_options = options.RANGE_SELECTOR_CONFIG
+    defaults = {}
+
+
+class MarkerConfig(ConfigSection):
+    '''http://www.highcharts.com/stock/ref/#plotOptions-spline-marker'''
+
+    available_options = options.MARKER_CONFIG
     defaults = {}

@@ -2,6 +2,7 @@ import encoders
 import options
 from common import *
 from config_sections import *
+from series import *
 
 
 class Chart(DictBacked):
