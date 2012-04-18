@@ -85,3 +85,9 @@ class YAxisConfig(ConfigSection):
     defaults = {
         "title": TitleConfig,
     }
+
+class RangeSelectorConfig(ConfigSection):
+    '''http://www.highcharts.com/stock/ref/#rangeSelector'''
+    
+    available_options = options.RANGE_SELECTOR_CONFIG
+    defaults = {}

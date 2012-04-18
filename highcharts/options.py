@@ -18,7 +18,8 @@ CHART = [
     'title',
     'tooltip',
     'xAxis',
-    'yAxis'
+    'yAxis',
+    'rangeSelector',
 ]
 
 
@@ -213,6 +214,9 @@ X_AXIS_CONFIG = [
 ]
 
 Y_AXIS_CONFIG = [
+    'top',
+    'width',
+    'height',
     'endOnTick',
     'gridLineWidth',
     'lineWidth',
@@ -258,4 +262,18 @@ Y_AXIS_CONFIG = [
     'tickPosition',
     'title',
     'type'
+]
+
+RANGE_SELECTOR_CONFIG = [
+    'buttons',
+    'buttonSpacing',
+    'buttonTheme',
+    'enabled',
+    'inputBoxStyle',
+    'inputDateFormat',
+    'inputEditDateFormat',
+    'inputEnabled',
+    'inputStyle',
+    'labelStyle',
+    'selected',
 ]
