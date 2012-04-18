@@ -23,6 +23,7 @@ class Chart(DictBacked):
         "xAxis": XAxisConfig,
         "yAxis": YAxisConfig,
         "rangeSelector": RangeSelectorConfig,
+        "scrollbar": ScrollbarConfig,
     }
 
     def add_series(self, series):

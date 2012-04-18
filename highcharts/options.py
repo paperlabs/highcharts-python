@@ -286,3 +286,22 @@ MARKER_CONFIG = [
     'radius',
     'symbol',
 ]
+
+SCROLLBAR_CONFIG = [
+    'enabled',
+    'height',
+    'barBackgroundColor',
+    'barBorderRadius',
+    'barBorderWidth',
+    'barBorderColor',
+    'buttonArrowColor',
+    'buttonBackgroundColor',
+    'buttonBorderColor',
+    'buttonBorderRadius',
+    'buttonBorderWidth',
+    'rifleColor',
+    'trackBackgroundColor',
+    'trackBorderColor',
+    'trackBorderWidth',
+    'trackBorderRadius'
+]

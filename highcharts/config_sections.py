@@ -99,3 +99,10 @@ class MarkerConfig(ConfigSection):
 
     available_options = options.MARKER_CONFIG
     defaults = {}
+
+
+class ScrollbarConfig(ConfigSection):
+    '''http://www.highcharts.com/stock/ref/#scrollbar'''
+
+    available_options = options.SCROLLBAR_CONFIG
+    defaults = {}
