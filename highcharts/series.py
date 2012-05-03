@@ -60,7 +60,10 @@ class SplineSeries(Series):
 
 class AreaSplineSeries(Series):
     series_type = 'areaspline'
-    available_options = ['fillColor', 'fillOpacity', 'lineColor', 'threshold']
+    available_options = ['fillColor', 'fillOpacity', 'lineColor', 'threshold',  'marker']
+    defaults = {
+        'marker': config_sections.MarkerConfig
+    }
 
 
 class AreaSeries(Series):
