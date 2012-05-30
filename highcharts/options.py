@@ -211,7 +211,9 @@ X_AXIS_CONFIG = [
     'tickPosition',
     'tickWidth',
     'title',
-    'type'
+    'type',
+    'range',
+    'minRange',
 ]
 
 Y_AXIS_CONFIG = [
