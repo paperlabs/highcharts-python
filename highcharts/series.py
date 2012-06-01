@@ -37,9 +37,9 @@ class Series(DictBacked):
     See http://www.highcharts.com/ref/#plotOptions-series for available options.
     '''
     def __init__(self, data=[], **kwargs):
-        self.defaults = {
-            'type': self.series_type
-        }
+        if self.defaults is None:
+            self.defaults = {}
+        self.defaults['type'] = self.series_type
         self.available_options += options.SERIES
         super(Series, self).__init__(**kwargs)
         self.data = data
